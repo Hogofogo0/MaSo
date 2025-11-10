@@ -4,6 +4,9 @@
 
 iframe {
   max-width: 300px;
+  margin-top: 20vh;
+  height: 70vh;
+  min-width: 35vw;
 }
 
 .topbar {
@@ -133,6 +136,7 @@ svg {
 
 .left-column {
   flex: 2; /* main content wider */
+  margin-top: 10vh;
 }
 
 .right-column {
