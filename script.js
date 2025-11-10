@@ -24,7 +24,10 @@ function updateCountdown() {
 
   minutesEl.textContent = pad(minutes);
   secondsEl.textContent = pad(seconds);
-  if(seconds % 20 == 0) audio.play();
+  if(seconds == 0 || minutes == 0) {
+    audio.play();
+    window.location.replace("https://docs.google.com/presentation/d/1AmyAQs8LR-B7KB6GSVj5piJiktSVsFFFday-b2NCIXE/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100");
+  }
 }
 
 updateCountdown();
