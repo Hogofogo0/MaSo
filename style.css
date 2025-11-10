@@ -65,7 +65,7 @@ body {
 }
 .mcon {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: max-content; /* prevents stretching left */
