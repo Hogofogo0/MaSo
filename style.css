@@ -93,6 +93,18 @@ h1 {
   justify-content: center;
 }
 
+.spotify {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.middle {
+  dislay: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
 .unit {
   background: rgba(255, 255, 255, 0.08);
   padding: 18px 22px;
