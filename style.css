@@ -4,12 +4,18 @@
 
 iframe {
   max-width: 300px;
+  margin-top: 5vh;
+  margin-right: 3vw;
+  height: 40vh;
+  min-width: 35vw;
+}
+#sit {
+  max-width: 300px;
   margin-top: 20vh;
   margin-right: 3vw;
   height: 70vh;
   min-width: 35vw;
 }
-
 .topbar {
   position: fixed;
   top: -3px;
