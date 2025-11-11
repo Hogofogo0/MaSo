@@ -36,7 +36,7 @@ function updateCountdown() {
 
   minutesEl.textContent = pad(minutes);
   secondsEl.textContent = pad(seconds);
-  if(seconds <= 0 && minutes<== 0) {
+  if(seconds <= 0 && minutes <= 0) {
     
     playAudio()
   }
