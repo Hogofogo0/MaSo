@@ -10,7 +10,7 @@ function pad(n) {
 }
 
 async function playAudio(){
-  await audio.play();
+  await metalPipe.play();
   await setTimeout(2900);
   await airport.play();
   await setTimeout(36000);
