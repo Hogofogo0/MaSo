@@ -12,9 +12,10 @@ function pad(n) {
 async function playAudio(){
   clearInterval(timer);
   await metalPipe.play();
-  await setTimeout(2900);
-  await airport.play();
-  await setTimeout(36000);
+  await setTimeout(()=>{await airport.play();
+                       await setTimeout(() => {window.location.replace("https://docs.google.com/presentation/d/1AmyAQs8LR-B7KB6GSVj5piJiktSVsFFFday-b2NCIXE/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100");}, 36000);},2900);
+  
+  
 }
 
 function updateCountdown() {
@@ -35,7 +36,7 @@ function updateCountdown() {
   secondsEl.textContent = pad(seconds);
   if(seconds == 0 || minutes == 0) {
     
-    playAudio().then(result => window.location.replace("https://docs.google.com/presentation/d/1AmyAQs8LR-B7KB6GSVj5piJiktSVsFFFday-b2NCIXE/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100"));
+    playAudio()
   }
 }
 
