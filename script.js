@@ -10,6 +10,7 @@ function pad(n) {
 }
 
 async function playAudio(){
+  clearInterval(timer);
   await metalPipe.play();
   await setTimeout(2900);
   await airport.play();
@@ -39,4 +40,4 @@ function updateCountdown() {
 }
 
 updateCountdown();
-setInterval(updateCountdown, 1000);
+var timer = setInterval(updateCountdown, 1000);
