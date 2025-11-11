@@ -1,6 +1,7 @@
 // Countdown target: 12.11.2025 09:20 (local time)
 const TARGET_DATE = new Date("2025-11-12T09:20:00");
-const audio = new Audio("https://github.com/Hogofogo0/maso/raw/refs/heads/main/jixaw-metal-pipe-falling-sound.mp3");
+const metalPipe = new Audio("https://github.com/Hogofogo0/maso/raw/refs/heads/main/assets/jixaw-metal-pipe-falling-sound.mp3");
+const aiport = new Audio("https://github.com/Hogofogo0/maso/raw/refs/heads/main/assets/airport.mpeg");
 const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 
@@ -10,7 +11,9 @@ function pad(n) {
 
 async function playAudio(){
   await audio.play();
-  setTimeout(2900);
+  await setTimeout(2900);
+  await airport.play();
+  await setTimeout(36000);
 }
 
 function updateCountdown() {
