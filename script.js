@@ -1,5 +1,5 @@
 // Countdown target: 12.11.2025 09:20 (local time)
-const TARGET_DATE = new Date("2025-11-12T09:20:00");
+const TARGET_DATE = new Date("2025-11-11T20:26:00");
 const metalPipe = new Audio("https://github.com/Hogofogo0/maso/raw/refs/heads/main/assets/jixaw-metal-pipe-falling-sound.mp3");
 const airport = new Audio("https://github.com/Hogofogo0/maso/raw/refs/heads/main/assets/airport.mpeg");
 const minutesEl = document.getElementById("minutes");
@@ -10,6 +10,9 @@ function pad(n) {
 }
 
 async function playAudio(){
+  clearInterval(timer);
+  minutesEl.textContent = pad(0);
+  secondsEl.textContent = pad(0);
   await metalPipe.play();
   await setTimeout(async ()=>{await airport.play();
                        await setTimeout(async () => {window.location.replace("https://docs.google.com/presentation/d/1AmyAQs8LR-B7KB6GSVj5piJiktSVsFFFday-b2NCIXE/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100");}, 23400);},2900);
@@ -33,7 +36,7 @@ function updateCountdown() {
 
   minutesEl.textContent = pad(minutes);
   secondsEl.textContent = pad(seconds);
-  if(seconds == 0 || minutes == 0) {
+  if(seconds <= 0 && minutes<== 0) {
     
     playAudio()
   }
